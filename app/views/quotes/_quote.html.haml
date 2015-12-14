@@ -1,0 +1,7 @@
+%div.ait-quote
+  %div.ait-quote__intro
+    = raw "Arystokracja IT to #{link_to 'bonusy za polecenia', '#'}:"
+  %div.ait-quote__content
+    = simple_format quote.content
+  %div.ait-quote__meta
+    = link_to quote.created_at, quote, class: 'ait-quote__permalink'

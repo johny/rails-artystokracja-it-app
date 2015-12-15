@@ -14,4 +14,5 @@
 
     %div.ait-wrapper
       = yield
-    = render partial: 'layouts/shared/gat'
+    - if Rails.env == "production"
+      = render partial: 'layouts/shared/gat'

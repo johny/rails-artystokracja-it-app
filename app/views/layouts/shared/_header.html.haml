@@ -1,4 +1,7 @@
 %header.ait-header
   %h1.ait-header__logo
-    = link_to "Arystokracja IT", root_path, class: 'ait-header__logo-link'
+    = link_to root_path, class: 'ait-header__logo-link' do
+      Arystokracja IT
+      %sup.ait-header__version
+        beta
   = link_to "Dodaj propozycję", new_quote_path, class: 'ait-header__link'

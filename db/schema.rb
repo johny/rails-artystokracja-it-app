@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20151214205422) do
 
   create_table "quotes", force: :cascade do |t|
     t.text     "content",    limit: 65535
-    t.boolean  "published"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.boolean  "published",                default: false, null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
 end

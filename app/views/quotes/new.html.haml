@@ -1,0 +1,8 @@
+= form_for @quote, html: {class: 'ait-form'} do |f|
+
+  %div.ait-form__row
+    = f.label :content, "Czym jest Arystokracja IT:", class: 'ait-form__label'
+    = f.text_area :content, class: 'ait-form__textarea', autofocus: true
+
+  %div.ait-form__actions
+    = f.submit "Wyślij propozycję", class: 'ait-form__submit-button'

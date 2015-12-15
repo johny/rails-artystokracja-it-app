@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 19px;
+}
+
+body {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande", sans-serif;
+  background: #333 asset-url('footer_lodyas--blue.png');
+  font-weight: 300;
+  color: #eee;
+}
+
+a:link, a:visited {
+  color: #eee;
+}
+
+a:hover, a:active {
+  color: #fff;
+}

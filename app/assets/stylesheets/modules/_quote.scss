@@ -1,0 +1,32 @@
+.ait-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ait-quote {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.4;
+  padding: 1rem 5rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+  &__intro {
+    font-size: 1rem;
+  }
+
+  &__content {
+    font-size: 2rem;
+  }
+
+  &__meta {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+
+  &__permalink {
+    color: #eee;
+  }
+}

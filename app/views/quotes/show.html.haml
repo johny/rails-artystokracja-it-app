@@ -1,1 +1,8 @@
 = render @quote
+
+- content_for :og do
+  -# %meta{property: "og:title", content: "#{raw @job.title} - Oferta pracy w Krakowie"}
+  %meta{property: "og:description", content: truncate(strip_tags(@quote.content), length: 150)}
+  %meta{property: "og:url", content: quote_url(@quote)}
+  %meta{property: "og:site_name", content: "ArystokracjaIT.pl"}
+  %meta{property: "og:type", content: "article"}

@@ -2,12 +2,25 @@
 %html
   %head
     %meta{charset: 'utf-8'}
-    %title Arystokracja IT
+    %title<= content_for?(:title) ? "#{yield(:title).chop} - Arystokracja IT" : "Arystokracja IT - Śmietanka ofert pracy branży IT"
+    %meta{name: "description", content: content_for?(:description) ? "#{yield(:description)}" : "Wybrane cytaty z ofert pracy branży IT! Mamy najlepsze oferty, benefity, płace, wszystko!" }
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    %link{rel: 'shortcut icon', href: 'favicon.png'}
-    %meta{property: "og:image", content: asset_url('og.png')}
+
+    - if content_for(:og)
+      = yield :og
+      %meta{property: "og:image", content: asset_url('og.png')}
+    - else
+      %meta{property: "og:description", content: "Wybrane cytaty z ofert pracy branży IT! Mamy najlepsze oferty, benefity, płace, wszystko!"}
+      %meta{property: "og:url", content: root_url}
+      %meta{property: "og:site_name", content: "ArystokracjaIT.pl"}
+      %meta{property: "og:image", content: asset_url('og.png')}
+
     = csrf_meta_tags
+
+    %link{rel: 'shortcut icon', href: 'favicon.png'}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
   %body
     = render partial: 'layouts/shared/header'
     = render partial: 'layouts/shared/flash'

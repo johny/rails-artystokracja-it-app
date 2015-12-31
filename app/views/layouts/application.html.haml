@@ -9,12 +9,13 @@
 
     - if content_for(:og)
       = yield :og
-      %meta{property: "og:image", content: asset_url('og.png')}
     - else
       %meta{property: "og:description", content: "Wybrane cytaty z ofert pracy branży IT! Mamy najlepsze oferty, benefity, płace, wszystko!"}
       %meta{property: "og:url", content: root_url}
       %meta{property: "og:site_name", content: "ArystokracjaIT.pl"}
       %meta{property: "og:image", content: asset_url('og.png')}
+    %meta{property: "og:image", content: asset_url('og.png')}
+    %meta{property: "fb:app_id", content: "727774573991183"}
 
     = csrf_meta_tags
 
